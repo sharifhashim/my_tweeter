@@ -1,0 +1,21 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  background-image: url("/images/asfalt-light.png");
+  background-color: #d89923;
+  z-index: 1;
+
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.displayName {
+  display: flex;
+  justify-content: center;
+  
+}
