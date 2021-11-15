@@ -1,0 +1,27 @@
+nav {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+}
+
+.logo {
+  margin-left: 1.5em;
+  align-self: center;
+}
+
+.sourceProFont {
+  font-family: "Source Pro Sans", sans-serif;
+  margin-right: 1.5em;
+  align-self: center;
+}
+
+.icon {
+  color: red;
+  width: 20px;
+  height: 20px;
+  margin: 5px auto;
+  display: block;
+}
