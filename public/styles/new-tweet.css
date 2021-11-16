@@ -24,3 +24,7 @@ textarea {
 ::placeholder {
   font-weight: bold;
 }
+
+.negativeCount {
+  color: red;
+}
