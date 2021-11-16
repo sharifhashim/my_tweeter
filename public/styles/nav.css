@@ -4,18 +4,18 @@ nav {
   height: 120px;
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", sans-serif;
   position: relative;
   z-index: 10;
 }
 
 .logo {
+  font-family: "Bungee", sans-serif;
   margin-left: 1.5em;
   align-self: center;
 }
 
 .sourceProFont {
-  font-family: "Source Pro Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-right: 1.5em;
   align-self: center;
 }
