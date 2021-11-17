@@ -82,7 +82,18 @@ $(document).ready(function() {
     event.preventDefault();
     console.log("default event stopped")
 
-    $.post("/tweets", $("#tweet-text").serialize())
+    //$.post("/tweets", $("#tweet-text").serialize())
+    if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
+      return alert("Please fill out tweet")
+    }
+    if ($("#tweet-text").val().length > 140) {
+      return alert("Tweet exceeds character limit")
+    }
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: $("#tweet-text").serialize(),
+    })
   })
 
   const loadTweets = function() {
