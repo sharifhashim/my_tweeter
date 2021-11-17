@@ -4,7 +4,9 @@ nav {
   height: 120px;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
   z-index: 10;
 }
 
