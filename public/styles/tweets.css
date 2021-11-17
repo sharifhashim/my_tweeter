@@ -10,7 +10,7 @@ article header{
   display: flex;
   justify-content: space-between;
   background-color: #f4f1ec;
-  margin: 1.5em 1em 1.5em 1em;
+  margin: 1em 1em 1.5em 1em;
 }
 
 article p {
@@ -22,6 +22,7 @@ article p {
 
 .grey {
   color: #c8d2e6;
+  align-self: center;
 }
 
 footer {
@@ -37,4 +38,13 @@ footer {
 
 .icons span:hover {
   color: #CA9823;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+.faceIcon span {
+  padding-left: 0.5em;
 }
