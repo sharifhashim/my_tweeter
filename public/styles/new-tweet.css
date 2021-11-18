@@ -28,3 +28,17 @@ textarea {
 .negativeCount {
   color: red;
 }
+
+.errorMsg {
+  display: flex;
+  justify-content: center;
+  color: red;
+  padding: 0.5em;
+  border: 2px solid red;
+  margin-top: 0.5em;
+}
+
+.errorMsg i {
+  padding-left: 10px;
+  padding-right: 10px;
+}
