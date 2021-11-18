@@ -60,6 +60,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="errorMsg">
+          <i id="insert" class="fa-solid fa-triangle-exclamation"></i>
+          <!-- <span>Tweet too long. Please limit to 140 characters or less</span> -->
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <label for="tweet-text"></label>
