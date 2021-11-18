@@ -12,8 +12,8 @@ $(document).ready(function() {
     }
   }
   const prePendTweet = function(arr) {
-    const lastItem = arr[arr.length - 1]
-    $(`.prepend`).prepend(createTweetElement(lastItem))
+    const $lastItem = arr[arr.length - 1]
+    $(`.prepend`).prepend(createTweetElement($lastItem))
   }
   const createTweetElement = function(tweetData) {
     const $tweet = $(`<article></article>`)
@@ -25,7 +25,8 @@ $(document).ready(function() {
       </div>
       <span class="grey">${tweetData.user.handle}</span>
     </header>`)
-    const $tweetBody = $(`<p>${tweetData.content.text}</p>`)
+    const $textareaTweet = tweetData.content.text
+    const $tweetBody = $(`<p></p>`).text($textareaTweet)
     const $timeAgo = timeago.format(tweetData.created_at)
     const $footer = $(`
     <footer>
@@ -56,10 +57,12 @@ $(document).ready(function() {
     if ($("#tweet-text").val().length > 140) {
       return alert("Tweet exceeds character limit")
     }
+    const $tweetText = $("#tweet-text")
+    
     $.ajax({
       method: "POST",
       url: "/tweets",
-      data: $("#tweet-text").serialize(),
+      data: $tweetText.serialize()
     })
     .then(() => {
       $.ajax({
