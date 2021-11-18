@@ -45,17 +45,19 @@ $(document).ready(function() {
 
   }
   //renderTweets(data);
-
+  $(`.errorMsg`).hide()
 
   $("form").on("submit", function(event) {
     event.preventDefault();
     console.log("default event stopped")
 
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
-      return alert("Please fill out tweet")
+      $("<span>Please fill out tweet</span>").insertAfter("#insert")
+      return $(`.errorMsg`).show()
     }
     if ($("#tweet-text").val().length > 140) {
-      return alert("Tweet exceeds character limit")
+      $("<span>Tweet too long. Please limit to 140 characters or less</span>").insertAfter("#insert")
+      return $(`.errorMsg`).show()
     }
     const $tweetText = $("#tweet-text")
     
