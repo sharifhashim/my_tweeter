@@ -50,14 +50,18 @@ $(document).ready(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
     console.log("default event stopped")
-
+    $(`.errorMsg`).slideUp(200)
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
-      $("<span>Please fill out tweet</span>").insertAfter("#insert")
-      return $(`.errorMsg`).show()
+      setTimeout(function() {
+        $(`.insertError`).text("Please fill out tweet")
+      }, 200)
+      return $(`.errorMsg`).slideDown("slow").show()
     }
     if ($("#tweet-text").val().length > 140) {
-      $("<span>Tweet too long. Please limit to 140 characters or less</span>").insertAfter("#insert")
-      return $(`.errorMsg`).show()
+      setTimeout(function() {
+        $(`.insertError`).text("Tweet too long. Please limit to 140 characters or less")
+      }, 200)
+      return $(`.errorMsg`).slideDown("slow").show()
     }
     const $tweetText = $("#tweet-text")
     
