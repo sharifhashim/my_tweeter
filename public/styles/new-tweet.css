@@ -10,6 +10,9 @@ button {
   border: none;
   padding: 0.2em 0.4em 0.2em 0.4em
 }
+button:hover {
+  cursor: pointer;
+}
 
 textarea {
   border: none;
@@ -19,6 +22,8 @@ textarea {
   resize: none;
   outline: none;
   line-height: 0.75;
+  margin-top: 1.5em;
+  padding-top: 0.75em;
 }
 
 ::placeholder {
