@@ -38,6 +38,7 @@ footer {
 
 .icons span:hover {
   color: #CA9823;
+  cursor: pointer;
 }
 
 header div {
