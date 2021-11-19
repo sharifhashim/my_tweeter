@@ -1,5 +1,6 @@
 nav {
-  background-color: #4056A1;
+  background-color: #d89923;
+  background-image: url("/images/asfalt-light.png");
   color: #FFFFFF;
   height: 120px;
   display: flex;
@@ -28,4 +29,18 @@ nav {
   height: 20px;
   margin: 5px auto;
   display: block;
+}
+.navBtn {
+  background-color: #d89923;
+  background-image: url("/images/asfalt-light.png");
+}
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+  .navBtn {
+    background-color: #4056A1;
+    background-image: none
+  }
 }
